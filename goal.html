@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>第1問</title>
+
+<style>
+body{
+    font-family:sans-serif;
+    background:#222;
+    color:white;
+    text-align:center;
+    margin-top:80px;
+}
+
+input{
+    font-size:20px;
+    padding:10px;
+}
+
+button{
+    font-size:20px;
+    padding:10px 20px;
+    margin-top:20px;
+}
+
+#msg{
+    color:#ff8080;
+    margin-top:20px;
+}
+</style>
+</head>
+
+<body>
+
+<h1>第1問</h1>
+
+<p>ここに問題文を書く！</p>
+
+<input id="pw" placeholder="答えを入力">
+
+<br><br>
+
+<button onclick="check()">送信</button>
+
+<p id="msg"></p>
+
+<script>
+function check(){
+
+let ans=document.getElementById("pw").value;
+
+if(ans.toUpperCase()=="APPLE"){
+    location.href="goal.html";
+}else{
+    document.getElementById("msg").innerHTML="違います";
+}
+
+}
+</script>
+
+</body>
+</html>
