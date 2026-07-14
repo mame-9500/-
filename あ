@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<title>謎解き</title>
+
+<style>
+body{
+    font-family:sans-serif;
+    text-align:center;
+    margin-top:30px;
+}
+
+img{
+    width:320px;
+    max-width:90%;
+}
+
+input{
+    padding:10px;
+    font-size:18px;
+    margin-top:20px;
+}
+
+button{
+    padding:10px 20px;
+    font-size:18px;
+    margin-top:15px;
+}
+</style>
+
+</head>
+<body>
+
+<h1 id="title">問題1</h1>
+
+<img id="photo" src="q1.jpg">
+
+<br>
+
+<input id="pw" placeholder="パスワード">
+
+<br>
+
+<button onclick="check()">決定</button>
+
+<script>
+
+const stage=[
+{
+img:"q1.jpg",
+answer:"apple",
+title:"問題1"
+},
+{
+img:"q2.jpg",
+answer:"banana",
+title:"問題2"
+},
+{
+img:"q3.jpg",
+answer:"orange",
+title:"問題3"
+}
+];
+
+let now=0;
+
+function check(){
+
+if(document.getElementById("pw").value==stage[now].answer){
+
+now++;
+
+if(now==stage.length){
+
+document.body.innerHTML=`
+<h1>GOAL!!</h1>
+<img src="goal.jpg" style="width:350px;max-width:90%;">
+`;
+
+}else{
+
+document.getElementById("photo").src=stage[now].img;
+document.getElementById("title").innerText=stage[now].title;
+document.getElementById("pw").value="";
+
+}
+
+}else{
+
+alert("違います");
+
+}
+
+}
+
+</script>
+
+</body>
+</html>
