@@ -1,1 +1,33 @@
+body {
+    background: white;
+    font-family: sans-serif;
+    text-align: center;
+    margin: 0;
+    padding: 40px 20px;
+}
 
+img {
+    width: 80%;
+    max-width: 500px;
+    margin-bottom: 30px;
+}
+
+input {
+    width: 250px;
+    padding: 12px;
+    font-size: 18px;
+}
+
+button {
+    margin-top: 20px;
+    padding: 12px 30px;
+    font-size: 18px;
+    background: #2196F3;
+    color: white;
+    border: none;
+    border-radius: 8px;
+}
+
+button:disabled {
+    background: gray;
+}
