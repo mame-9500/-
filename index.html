@@ -3,37 +3,27 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>謎解き</title>
-
-<style>
-body{
-    font-family:sans-serif;
-    background:#222;
-    color:white;
-    text-align:center;
-    margin-top:100px;
-}
-
-button{
-    font-size:24px;
-    padding:15px 40px;
-    border:none;
-    border-radius:10px;
-    cursor:pointer;
-}
-</style>
-
+<title>問題1</title>
+<link rel="stylesheet" href="style.css">
 </head>
 
 <body>
 
-<h1>🔍 謎解きへようこそ 🔍</h1>
+<img src="photo1.jpg" alt="問題1">
 
-<p>すべての謎を解いてゴールを目指そう！</p>
+<input
+    type="text"
+    id="answer"
+    placeholder="答えを入力">
 
-<button onclick="location.href='question1.html'">
-スタート
-</button>
+<br>
+
+<button id="next" disabled>決定</button>
+
+<script src="script.js"></script>
+<script>
+checkAnswer("ナガサキ","question1.html");
+</script>
 
 </body>
 </html>
