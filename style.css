@@ -7,9 +7,11 @@ body {
 }
 
 img {
-    width: 80%;
+    width: 95%;
     max-width: 500px;
-    margin-bottom: 30px;
+    height: auto;
+    display: block;
+    margin: 0 auto 30px;
 }
 
 input {
