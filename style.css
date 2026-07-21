@@ -70,7 +70,3 @@ button:disabled {
 .back:hover {
     background: #1976D2;
 }
-
-button:active {
-    transform: scale(0.97);
-}
