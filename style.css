@@ -44,3 +44,26 @@ button:disabled {
     background: gray;
     cursor: not-allowed;
 }
+.buttons {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    margin-top: 20px;
+}
+
+.back {
+    width: 45px;
+    height: 45px;
+    padding: 0;
+    font-size: 22px;
+    background: #888;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+}
+
+.back:hover {
+    background: #666;
+}
