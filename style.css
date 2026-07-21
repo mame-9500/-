@@ -25,15 +25,24 @@ input {
     box-sizing: border-box;
 }
 
-button {
+.buttons {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 12px;
     margin-top: 20px;
-    padding: 12px 30px;
+}
+
+button {
+    height: 48px;
+    padding: 0 30px;
     font-size: 18px;
     background: #2196F3;
     color: white;
     border: none;
     border-radius: 8px;
     cursor: pointer;
+    transition: background 0.2s;
 }
 
 button:hover:not(:disabled) {
@@ -44,26 +53,24 @@ button:disabled {
     background: gray;
     cursor: not-allowed;
 }
-.buttons {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    gap: 10px;
-    margin-top: 20px;
-}
 
 .back {
-    width: 45px;
-    height: 45px;
+    width: 48px;
+    height: 48px;
     padding: 0;
     font-size: 22px;
-    background: #888;
+    background: #2196F3;
     color: white;
     border: none;
     border-radius: 8px;
     cursor: pointer;
+    transition: background 0.2s;
 }
 
 .back:hover {
-    background: #666;
+    background: #1976D2;
+}
+
+button:active {
+    transform: scale(0.97);
 }
