@@ -2,22 +2,26 @@ function checkAnswer(correctAnswers, nextPage) {
     const input = document.getElementById("answer");
     const button = document.getElementById("next");
 
+    // 1つだけ指定された場合でも配列にする
+    if (!Array.isArray(correctAnswers)) {
+        correctAnswers = [correctAnswers];
+    }
+
     const saved = sessionStorage.getItem(location.pathname);
     if (saved) {
         input.value = saved;
-        if (correctAnswers.includes(saved.trim())) {
-            button.disabled = false;
-        }
     }
+
+    function updateButton() {
+        const answer = input.value.trim();
+        button.disabled = !correctAnswers.includes(answer);
+    }
+
+    updateButton();
 
     input.addEventListener("input", function () {
         sessionStorage.setItem(location.pathname, input.value);
-
-        if (correctAnswers.includes(input.value.trim())) {
-            button.disabled = false;
-        } else {
-            button.disabled = true;
-        }
+        updateButton();
     });
 
     button.addEventListener("click", function () {
