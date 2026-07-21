@@ -13,8 +13,8 @@ function checkAnswer(correctAnswers, nextPage) {
     }
 
     function updateButton() {
-        const answer = input.value.trim();
-        button.disabled = !correctAnswers.includes(answer);
+        const answer = input.value.trim().replace(/\s+/g, "");
+button.disabled = !correctAnswers.includes(answer);
     }
 
     updateButton();
