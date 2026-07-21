@@ -1,12 +1,11 @@
-function checkAnswer(correct, nextPage) {
+function checkAnswer(correctAnswers, nextPage) {
     const input = document.getElementById("answer");
     const button = document.getElementById("next");
 
-    // 入力内容を復元
     const saved = sessionStorage.getItem(location.pathname);
     if (saved) {
         input.value = saved;
-        if (saved.trim() === correct) {
+        if (correctAnswers.includes(saved.trim())) {
             button.disabled = false;
         }
     }
@@ -14,7 +13,7 @@ function checkAnswer(correct, nextPage) {
     input.addEventListener("input", function () {
         sessionStorage.setItem(location.pathname, input.value);
 
-        if (input.value.trim() === correct) {
+        if (correctAnswers.includes(input.value.trim())) {
             button.disabled = false;
         } else {
             button.disabled = true;
