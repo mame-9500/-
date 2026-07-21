@@ -18,12 +18,14 @@
 
 <br>
 
-<button id="next" disabled>次のページへ→</button>
+<div class="buttons">
+    <button class="back" onclick="history.back()">←</button>
+    <button id="next" disabled>次のページへ→</button>
+</div>
 
 <script src="script.js"></script>
 <script>
 checkAnswer(["いか","イカ"],"question2.html");
 </script>
-<button onclick="history.back()">← 前のページへ</button>
 </body>
 </html>
